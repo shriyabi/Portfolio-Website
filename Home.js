@@ -108,13 +108,13 @@ function loopThroughWords() {
       el.style.opacity = '1';
     });
     index = nextIndex;
-  }, index * 1000);
+  }, index * 200);
 }
 setTimeout(() => {
   loopThroughWords();
   setInterval(() => {
     loopThroughWords();
-  }, words.length * 1000);
+  }, words.length * 250);
 }, 3000);
 
 
