@@ -77,3 +77,55 @@ const appearOnScroll2 = new IntersectionObserver
 elements2.forEach(fader => {
     appearOnScroll2.observe(fader);
 }); 
+
+/*// Integrating the roles from CSS
+const words = document.querySelectorAll('.roles').innerText.split(' ');
+let index = 0;
+function loopThroughWords() {
+  setTimeout(() => {
+    // Hide the current word
+    words.forEach(w => w.style.opacity = '0');
+    // Show the next word
+    const nextIndex = (index + 1) % words.length;
+    words[nextIndex].style.opacity = '1';
+    // Increment index for the next iteration
+    index = nextIndex;
+  }, index * 2000);
+}*/
+
+// Integrating the roles from CSS
+const rolesElements = document.querySelectorAll('.roles');
+const words = rolesElements[0].innerText.split(' '); // Assuming there's only one element with class 'roles'
+let index = 0;
+function loopThroughWords() {
+  setTimeout(() => {
+    // Hide the current word
+    rolesElements.forEach(el => el.style.opacity = '0');
+    // Show the next word
+    const nextIndex = (index + 1) % words.length;
+    rolesElements.forEach(el => {
+      el.innerText = words[nextIndex];
+      el.style.opacity = '1';
+    });
+    index = nextIndex;
+  }, index * 1000);
+}
+setTimeout(() => {
+  loopThroughWords();
+  setInterval(() => {
+    loopThroughWords();
+  }, words.length * 1000);
+}, 3000);
+
+
+
+
+    /*  if (index < words.length - 1) {
+        words[index + 1].style.opacity = '1'; // Show the next word
+      } else {
+        words[0].style.opacity = '1'; // Show the first word for infinite loop
+      }
+    }, index * 2000); 
+
+setTimeout(() => { loopThroughWords();
+setInterval(loopThroughWords, words.length * 2000);}, 4000); */
