@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&family=Poppins&family=Raleway:wght@300;400&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
 
-        <script>
+    <!-- <script>
         const elements = document.querySelectorAll('.fade-in1');
 
 const appearOptions = {
@@ -90,9 +90,14 @@ appearOptions2);
 elements2.forEach(fader => {
   appearOnScroll2.observe(fader); 
 }); 
-   </script>
-        
+   </script> -->
+
     <style>
+        .container {
+            display: inline;
+            flex-direction: column;
+        }
+
         body {
             background-color: #011f2f;
             /*#0365A6;*/
@@ -102,7 +107,7 @@ elements2.forEach(fader => {
 
         .title {
             margin-top: 2vh;
-            margin-bottom: 50vh;
+            margin-bottom: 2vh;
         }
 
         h1 {
@@ -111,13 +116,13 @@ elements2.forEach(fader => {
             font-family: 'Dosis', sans-serif;
             font-family: 'Poppins', sans-serif;
             font-family: 'Raleway', sans-serif;
-            font-size: 80px;
+            font-size: 5em;
         }
 
         .line-1 {
             position: center;
             top: 50%;
-            width: 80em;
+            width: 80vm;
             margin: 0 auto;
             border-right: 2px solid rgba(255, 255, 255, .75);
             font-size: 180%;
@@ -126,12 +131,12 @@ elements2.forEach(fader => {
             overflow: hidden;
             transform: translateY(-50%);
             margin-top: 4vh;
-            margin-bottom: 10vh;
             color: #8ECAE6;
             font-family: 'Dosis', sans-serif;
             font-family: 'Poppins', sans-serif;
             font-family: 'Raleway', sans-serif;
-            font-size: 90px;
+            font-size: 5.3em;
+            padding-top: 1vh;
         }
 
         /* Animation */
@@ -167,7 +172,7 @@ elements2.forEach(fader => {
             font-family: 'Roboto Condensed', sans-serif;
             color: #FB8500;
             padding: 5px;
-            font-size: 50px;
+            font-size: 2.5em;
         }
 
         h3 {
@@ -177,42 +182,47 @@ elements2.forEach(fader => {
             font-family: 'Roboto Condensed', sans-serif;
             color: #FFB703;
             padding: 5px;
-            font-size: 30px;
+            font-size: 1.8em;
             margin-top: 40vh;
         }
 
         h4 {
             margin-top: 2vh;
-            padding-right: 3vw; 
+            padding-right: 3vw;
             text-align: right;
             color: #219EBC;
             font-family: 'Dosis', sans-serif;
             font-family: 'Poppins', sans-serif;
             font-family: 'Raleway', sans-serif;
-            font-size: 25px; 
-            opacity: 0; 
-            animation: fadeIn 5s 2s;
+            font-size: 1.6em;
+            opacity: 0;
+            animation: fadeIn 4s 3s forwards; 
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         .left-oriented {
             padding: 5px;
             display: inline-block;
-            width: 60vw; 
             padding: 5px;
             margin-top: 5vh;
             border-radius: 10px;
             border-style: double;
             border-color: #219EBC;
-            border-width: thick;
+            border-width: 10px;
             background-color: #023047;
             padding: 20px;
             overflow: scroll;
             align-self: left;
-            margin-left: 5vw;
+            margin-left: 3vw;
 
         }
 
@@ -224,9 +234,9 @@ elements2.forEach(fader => {
         }
 
         .left-oriented:hover {
-            background-color: #219EBC;
+            background-color: #177c96;
             border-color: #023047;
-            border-width: thick;
+            border-width: 25px;
             transition: 0.2s;
         }
 
@@ -240,7 +250,7 @@ elements2.forEach(fader => {
             border-radius: 10px;
             border-style: double;
             border-color: #219EBC;
-            border-width: thick;
+            border-width: 10px;
             background-color: #023047;
             padding: 20px;
             overflow: scroll;
@@ -250,23 +260,25 @@ elements2.forEach(fader => {
             float: right;
 
         }
+
         .right-oriented:hover {
-            background-color: #219EBC;
+            background-color: #177c96;
             border-color: #023047;
-            border-width: thick;
+            border-width: 20px;
             transition: 0.2s;
         }
+
         .right-oriented:hover {
-            background-color: #219EBC;
+            background-color: #177c96;
             border-color: #023047;
-            border-width: thick;
+            border-width: 25px;
             transition: 0.2s;
         }
 
         .fade-in1 {
             opacity: 0;
             transition: opacity 250ms;
-           /* transition-delay: 3s; */
+            /* transition-delay: 3s; */
 
         }
 
@@ -289,7 +301,7 @@ elements2.forEach(fader => {
             font-family: 'Raleway', sans-serif;
             font-family: 'Roboto Condensed', sans-serif;
             color: #FFB703;
-            font-size: 30px;
+            font-size: 1.875em;
         }
 
         .center {
@@ -307,7 +319,7 @@ elements2.forEach(fader => {
             overflow: scroll;
             margin-right: 5vw;
             float: center;
-            margin-left: 5vw; 
+            margin-left: 5vw;
         }
 
         .center:hover {
@@ -337,6 +349,30 @@ elements2.forEach(fader => {
         a:visited {
             text-decoration: none;
         }
+
+     
+
+        .roles {
+            font-family: 'Dosis', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #FB8500;
+            font-size: 5em;
+            animation: loopText 7s infinite linear; 
+            text-align: center;
+            margin-bottom: 10vh;
+        }
+
+        @keyframes loopText{
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+
+       
+        /*.image{
+            margin-left: 2.5vw;
+        } */
     </style>
 </head>
 
@@ -344,10 +380,11 @@ elements2.forEach(fader => {
 <body>
     <h4> <a href="Projects.html"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="Awards.html"> HONORS </a> &nbsp;
         &nbsp; &nbsp; &nbsp; <a href="Contact.html"> CONTACT </a> </h4>
-    <h3 style = "text-align: center"> Hello! I am </h3>
+    <h3 style="text-align: center"> Hello! I am </h3>
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
+    <div class="roles" style="opacity: 0;"> Engineer </div>
 
-    <div class="fade-in1 left-oriented">
+    <div class="container fade-in1 left-oriented" style="width: 55vw;">
         <h2> ABOUT ME </h2>
         <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
             Science. I have partaken in multiple research projects at the university level, notably developing a mental
@@ -358,10 +395,16 @@ elements2.forEach(fader => {
             combine both my technological and actiist background to develop real-world tecnological, equitable
             solutions. </p>
     </div>
+
+    <div class="container fade-in2"> <img src="dec5famsh4.jpeg"
+            style= "width: 27vw; height: 37.5em; margin-right: 5vw; margin-left: 1.5vw"> </div>
+
+
     <div class="fade-in2 right-oriented">
         <h2> SKILLS </h2>
         <p> • Machine Learning <br> • PyTorch <br> • Python (Programming Language) <br> • Java <br> • C++ <br> • Ubuntu
-            <br> • Linux <br> • Web Development (CSS, HTML, JavaScript) <br> • Julia (Programming Language) </p>
+            <br> • Linux <br> • Web Development (CSS, HTML, JavaScript) <br> • Julia (Programming Language)
+        </p>
     </div>
 
     <div class=" fade-in2 left-oriented">
@@ -371,7 +414,8 @@ elements2.forEach(fader => {
         <p> GPA: N/A </p>
         <p> Expected Graduation: April 2026 </p>
         <p> Coursework: <br> EECS 280: Programming and Data Structures <br> EECS 203: Discrete Mathematics <br> ENGR
-            100: Robotics Mechanisms <br> ROB 101: Computational Linear Algebra <br> EECS 281: Data Structures and Algorithms 
+            100: Robotics Mechanisms <br> ROB 101: Computational Linear Algebra <br> EECS 281: Data Structures and
+            Algorithms
             <br> EECS 201: Computer Science Pragmatics
         </p>
         <p> Activities: Google Student Developer Club, Miss STEM Careers </p>
@@ -379,10 +423,13 @@ elements2.forEach(fader => {
 
     <br>
     <div class="fade-in2 center">
-        <h2 style="text-align: center; "> <a href="Projects.html"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="Awards.html"> HONORS </a> &nbsp;
+        <h2 style="text-align: center; "> <a href="Projects.html"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a
+                href="Awards.html"> HONORS </a> &nbsp;
             &nbsp; &nbsp; &nbsp; <a href="Contact.html"> CONTACT </a> </h2>
         <!-- <h2 style = "text-align: center; display: inline;"> AWARDS </h2> -->
     </div>
+
+    <script src="Home.js"> </script>
 </body>
 
 </html>
