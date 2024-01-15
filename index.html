@@ -209,16 +209,15 @@ elements2.forEach(fader => {
         }
 
         .left-oriented {
-            padding: 5px;
+            padding: 0.3125em;
             display: inline-block;
-            padding: 5px;
             margin-top: 5vh;
-            border-radius: 10px;
+            border-radius: 0.625em;
             border-style: double;
             border-color: #219EBC;
-            border-width: 10px;
+            border-width: 0.625em;
             background-color: #023047;
-            padding: 20px;
+            padding: 1.25em;
             overflow: scroll;
             align-self: left;
             margin-left: 3vw;
@@ -235,23 +234,22 @@ elements2.forEach(fader => {
         .left-oriented:hover {
             background-color: #177c96;
             border-color: #023047;
-            border-width: 25px;
+            border-width: 1.6em;
             transition: 0.2s;
         }
 
 
         .right-oriented {
             margin-top: 4vh;
-            padding: 5px;
             display: block;
             width: 30vw;
-            padding: 5px;
-            border-radius: 10px;
+            padding: 0.3125em;
+            border-radius: 0.625em;
             border-style: double;
             border-color: #219EBC;
-            border-width: 10px;
+            border-width: 0.625em;
             background-color: #023047;
-            padding: 20px;
+            padding: 1.25em;
             overflow: scroll;
             align-self: right;
             text-align: right;
@@ -270,7 +268,7 @@ elements2.forEach(fader => {
         .right-oriented:hover {
             background-color: #177c96;
             border-color: #023047;
-            border-width: 25px;
+            border-width: 1.6em;
             transition: 0.2s;
         }
 
@@ -307,25 +305,25 @@ elements2.forEach(fader => {
             margin-top: 5vh;
             padding: 5px;
             display: block;
-            width: 85vw;
+            width: 88vw;
             padding: 5px;
             border-radius: 10px;
             border-style: double;
             border-color: #219EBC;
-            border-width: thick;
+            border-width: 0.5em;
             background-color: #023047;
             padding: 20px;
-            overflow: scroll;
-            margin-right: 5vw;
+            overflow: -moz-hidden-unscrollable;
+            margin-right: 4vw;
             float: center;
-            margin-left: 5vw;
+            margin-left: 3vw;
             text-align: center;
         }
 
         .center:hover {
-            background-color: #219EBC;
+            background-color: #177c96;
             border-color: #023047;
-            border-width: thick;
+            border-width: 0.4em;
             transition: 0.2s;
         }
 
@@ -364,22 +362,58 @@ elements2.forEach(fader => {
             opacity: 0;
         }
 
-        .fa:hover {
-            color:#023047; 
-        }
+
         .fa-instagram {
             color: #FFB703;
         }
+
         .fa-linkedin {
             color: #FFB703;
         }
+
         .fa-google {
             color: #FFB703;
         }
+
         .fa-github {
             color: #FFB703;
+            transition: 0.1s; 
+        }
+        .fa-github:hover {
+            color: #023047;
+        }
+        .fa-linkedin:hover {
+            color: #023047;
+            transition: 0.1s; 
+        }
+        .fa-google:hover {
+            color: #023047;
+            transition: 0.1s; 
+        }
+        .fa-instagram:hover {
+            color: #023047;
+            transition: 0.1s; 
         }
 
+
+        .fa-google .tooltiptext {
+            visibility: hidden;
+            font-size: 1.2em;
+            background-color: #dcf4fc;
+            color: #FB8500;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            font-family: 'Dosis', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Raleway', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;
+
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -429,16 +463,20 @@ elements2.forEach(fader => {
 
     <br>
     <div class="fade-in2 center fa-3x">
-        <h2 style ="text-align: center; font-size: 1em;" id = "Contact"> Let's Connect <br> </h2> 
-        <a href = "https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;" > </i></a> 
+        <h2 style="text-align: center; font-size: 1em;" id="Contact"> Let's Connect <br> </h2>
+        <a href="https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x"
+                style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;">
+            </i></a>
         &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="https://www.linkedin.com/in/shriya-biddala/"> <i class="fab fa-align-center fa-linkedin fa-bounce fa-2x"> </i> </a>
+        <a href="https://www.linkedin.com/in/shriya-biddala/"> <i
+                class="fab fa-align-center fa-linkedin fa-bounce fa-2x"> </i> </a>
         &nbsp; &nbsp; &nbsp; &nbsp;
         <a href="https://github.com/shriyabi"> <i class="fa-brands fa-github fa-bounce fa-2x"></i> </a>
         &nbsp; &nbsp; &nbsp; &nbsp;
-        <i class="fa-brands fa-google fa-bounce fa-2x" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;"></i>
+        <i class="fa-brands fa-google fa-bounce fa-2x"
+            style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;"> <div class = "tooltiptext"> sbiddala@umich.edu </div> </i>
 
-    <script src="Home.js"> </script>
+        <script src="Home.js"> </script>
 </body>
 
 </html>
