@@ -99,7 +99,7 @@ setTimeout(() => {
   setInterval(() => {
     loopThroughWords();
   }, words.length * 250);
-}, 3000);
+}, 3500);
 
 
 
