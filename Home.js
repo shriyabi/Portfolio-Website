@@ -26,7 +26,6 @@ elements.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-
 const elements1 = document.querySelectorAll('.fade-in2');
 const appearOptions1 = {
     root: null,
@@ -77,21 +76,6 @@ const appearOnScroll2 = new IntersectionObserver
 elements2.forEach(fader => {
     appearOnScroll2.observe(fader);
 }); 
-
-/*// Integrating the roles from CSS
-const words = document.querySelectorAll('.roles').innerText.split(' ');
-let index = 0;
-function loopThroughWords() {
-  setTimeout(() => {
-    // Hide the current word
-    words.forEach(w => w.style.opacity = '0');
-    // Show the next word
-    const nextIndex = (index + 1) % words.length;
-    words[nextIndex].style.opacity = '1';
-    // Increment index for the next iteration
-    index = nextIndex;
-  }, index * 2000);
-}*/
 
 // Integrating the roles from CSS
 const rolesElements = document.querySelectorAll('.roles');

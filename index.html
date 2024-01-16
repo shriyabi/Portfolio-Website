@@ -208,10 +208,12 @@ elements2.forEach(fader => {
             }
         }
 
+
+
         .left-oriented {
             padding: 0.3125em;
             display: inline-block;
-            margin-top: 5vh;
+            /* margin-top: 5vh; */
             border-radius: 0.625em;
             border-style: double;
             border-color: #219EBC;
@@ -229,6 +231,7 @@ elements2.forEach(fader => {
             color: #8ECAE6;
             border-color: #8ECAE6;
             transition: 0.2s;
+            box-shadow: 0 0 4em #177c96;
         }
 
         .left-oriented:hover {
@@ -236,6 +239,7 @@ elements2.forEach(fader => {
             border-color: #023047;
             border-width: 1.6em;
             transition: 0.2s;
+            box-shadow: 0 0 4em #177c96;
         }
 
 
@@ -263,6 +267,7 @@ elements2.forEach(fader => {
             border-color: #023047;
             border-width: 20px;
             transition: 0.2s;
+            box-shadow: 0 0 2em #177c96;
         }
 
         .right-oriented:hover {
@@ -270,12 +275,13 @@ elements2.forEach(fader => {
             border-color: #023047;
             border-width: 1.6em;
             transition: 0.2s;
+            box-shadow: 0 0 4em #177c96;
         }
 
         .fade-in1 {
             opacity: 0;
             transition: opacity 250ms;
-            /* transition-delay: 3s; */
+            transition-delay: 3s;
 
         }
 
@@ -287,6 +293,8 @@ elements2.forEach(fader => {
             opacity: 0;
             transition: opacity 250ms ease-in;
         }
+
+
 
         .fade-in2.appear {
             opacity: 1;
@@ -314,7 +322,7 @@ elements2.forEach(fader => {
             background-color: #023047;
             padding: 20px;
             overflow: -moz-hidden-unscrollable;
-            margin-right: 4vw;
+            margin-right: 3vw;
             float: center;
             margin-left: 3vw;
             text-align: center;
@@ -325,6 +333,7 @@ elements2.forEach(fader => {
             border-color: #023047;
             border-width: 0.4em;
             transition: 0.2s;
+            box-shadow: 0 0 2em #177c96;
         }
 
         a:link {
@@ -373,46 +382,98 @@ elements2.forEach(fader => {
 
         .fa-google {
             color: #FFB703;
+            cursor: pointer;
         }
 
         .fa-github {
             color: #FFB703;
-            transition: 0.1s; 
+            transition: 0.1s;
         }
+
         .fa-github:hover {
             color: #023047;
+            animation: none;
         }
+
         .fa-linkedin:hover {
             color: #023047;
-            transition: 0.1s; 
+            transition: 0.1s;
+            animation: none;
         }
+
         .fa-google:hover {
             color: #023047;
-            transition: 0.1s; 
+            /* Adjust the color of the text as needed */
+            transition: 0.1s;
+            animation: none;
         }
+
         .fa-instagram:hover {
             color: #023047;
-            transition: 0.1s; 
+            transition: 0.1s;
+            animation: none;
         }
 
-
-        .fa-google .tooltiptext {
+        .google-hover-text {
             visibility: hidden;
-            font-size: 1.2em;
-            background-color: #dcf4fc;
+            box-shadow: 0 0 4em #023047;
             color: #FB8500;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            font-family: 'Dosis', sans-serif;
-            font-family: 'Poppins', sans-serif;
-            font-family: 'Raleway', sans-serif;
-            font-family: 'Roboto Condensed', sans-serif;
-
-
-            /* Position the tooltip */
+            background-color: #fb86008d;
+            text-align: left;
             position: absolute;
             z-index: 1;
+        }
+
+        .fa-google:hover .google-hover-text {
+            visibility: visible;
+        }
+
+        /*  .image-container img {
+  border-width: 1.2em;
+  background: linear-gradient(to right, #070707, #687aff);
+  box-sizing: border-box;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}*/
+        .image-container {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1.2em solid transparent;
+            border-image: linear-gradient(to right, #FB8500, #011f2f);
+            border-image-slice: 1;
+            box-sizing: border-box;
+            border-radius: 50%;
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 1;
+            /* Ensure the image is on top of the rotating border */
         }
     </style>
 </head>
@@ -423,8 +484,9 @@ elements2.forEach(fader => {
         &nbsp; &nbsp; &nbsp; <a href="#Contact"> CONTACT </a> </h4>
     <h3 style="text-align: center"> Hello! I am </h3>
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
-    <div class="roles"> A.I.-Nerd Engineer Student Developer Equity-Activist Tech-Enthusiast</div>
-    <div class="container fade-in1 left-oriented" style="width: 55vw;">
+    <div class="roles"> A.I.-Nerd Engineer Student Web-Developer Equity-Activist Tech-Enthusiast</div>
+    <div class="container fade-in1 left-oriented rotating-border"
+        style="width: 60vw; transition-delay: 3s; margin-top: 10vh; margin-right: 10vw;">
         <h2> ABOUT ME </h2>
         <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
             Science. I have partaken in multiple research projects at the university level, notably developing a mental
@@ -436,9 +498,8 @@ elements2.forEach(fader => {
             solutions. </p>
     </div>
 
-    <div class="container fade-in2"> <img src="dec5famsh4.jpeg"
-            style="width: 27vw; height: 37.5em; margin-right: 5vw; margin-left: 1.5vw"> </div>
-
+    <div class="container fade-in1 image-container"> <img src="dec5famsh4.jpeg"
+            style="transition-delay: 3s; width: 15vw; height: 25vh; margin-right: 3vw; border-radius: 50%;"> </div>
 
     <div class="fade-in2 right-oriented">
         <h2> SKILLS </h2>
@@ -447,7 +508,7 @@ elements2.forEach(fader => {
         </p>
     </div>
 
-    <div class=" fade-in2 left-oriented">
+    <div class=" fade-in2 left-oriented" style="margin-top: 5vh;">
         <h2> EDUCATION </h2>
         <p> University of Michigan - Ann Arbor </p>
         <p> Bachelor of Science in Computer Science </p>
@@ -474,7 +535,12 @@ elements2.forEach(fader => {
         <a href="https://github.com/shriyabi"> <i class="fa-brands fa-github fa-bounce fa-2x"></i> </a>
         &nbsp; &nbsp; &nbsp; &nbsp;
         <i class="fa-brands fa-google fa-bounce fa-2x"
-            style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;"> <div class = "tooltiptext"> sbiddala@umich.edu </div> </i>
+            style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;">
+            <span class="google-hover-text"
+                style="color: #023047; font-size: 0.2em; font-family: 'Dosis', sans-serif;
+            font-family: 'Poppins', sans-serif; font-family: 'Raleway', sans-serif;  font-family: 'Roboto Condensed', sans-serif; border-radius: 6px; box-shadow: 0 0 4em #023047;">
+                School email: sbiddala@umich.edu <br> Personal email: shriyarbiddala@gmail.com</span>
+        </i>
 
         <script src="Home.js"> </script>
 </body>
