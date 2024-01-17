@@ -572,18 +572,182 @@ elements2.forEach(fader => {
             initial-value: 0deg;
             inherits: false;
         }
-        .containerMove{
-        display: flex;
-    flex-direction: row;
-    
-    /*float: left; */
+
+        .containerMove {
+            display: flex;
+            flex-direction: row;
+
+            /*float: left; */
         }
+
+
+        /* slideshow for projects */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #04608e;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #011f2f;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #023047;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #04608e;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+        * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
     </style>
 </head>
 
 
 <body>
-    <h4> <a href="Projects.html"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="Awards.html"> HONORS </a> &nbsp;
+    <h4> <a href="Projects.html"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#Awards"> HONORS </a> &nbsp;
         &nbsp; &nbsp; &nbsp; <a href="#Contact"> CONTACT </a> </h4>
     <h3 style="text-align: center"> Hello! I am </h3>
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
@@ -601,7 +765,7 @@ elements2.forEach(fader => {
             solutions. </p>
     </div>
 
-    <div class="containerMove fade-in1 box" style = "flex-direction: row; flex: right">
+    <div class="containerMove fade-in1 box" style="flex-direction: row; flex: right">
         <img src="dec5famsh4.jpeg" style="transition-delay: 3s;">
     </div>
 
@@ -627,6 +791,65 @@ elements2.forEach(fader => {
     </div>
 
     <br>
+<div class="slideshow-container center">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <h2> Awards </h2>
+    <h3> <a href="https://www.aspirations.org/2023-national-aspirations-in-computing-award-recipients-announced/">
+                NCWIT AiC 2023 National Honorable Mention </a> </h3>
+    <p style = "text-align: center;"> Awarded to 360 women/nonbinary technology enthusiasts from all over the country who have displayed
+            exceptional achievement, aptitude, engagement, and initiative in computing. </p>
+    <p style = "color: #023047; font-size: 1em;"> 1 / 5 </p>
+   
+  </div>
+
+  <div class="mySlides fade">
+    <h2> Awards </h2>
+    <h3> <a href = "
+        https://education.ti.com/en/promotion/codescontest/2021/"> 2021 Texas Instruments Codes Contest </a> </h3>
+    <p style = "text-align: center;"> One of five teams who recieved an honorable mention in the finalist round, and selected from 64 teams
+            through four rounds of development in the contest. </p>
+    <p style = "color: #023047; font-size: 1em;"> 2 / 5 </p>
+  </div>
+
+  <div class="mySlides fade">
+    <h2> Awards </h2>
+    <h3> <a href = " https://www.aspirations.org/people/shriya-b/98595/"> NCWIT AiC 2023 Colorado Affiliate Winner </a> </h3>
+    <p style="text-align: center;"> Awarded to high achieving women/non binary tech enthusiasts in Colorado who have demonstrated a notable
+            aptitude, engagement, and achievement with computing. </p>
+    <p style = "color: #023047; font-size: 1em;"> 3 / 5 </p>
+  </div>
+
+  <div class="mySlides fade">
+    <h2> Awards </h2>
+    <h3> MHacks 2023 optiMize Social Impact Award: 3rd Place </h3>
+    <p style="text-align: center;"> Awarded $200 for our civic-engagement focused website, OneVote. </p>
+    <p style = "color: #023047; font-size: 1em;"> 4 / 5 </p>
+  </div>
+
+  <div class="mySlides fade">
+    <h2> Awards </h2>
+    <h3> Colorado Seal of Biliteracy Endorsement in Spanish </h3>
+    <p style="text-align: center;"> Awarded to students who have taken Spanish and English through Level 5 and maintained an average GPA of 3.0+ in both English and Spanish courses. </p>
+    <p style = "color: #023047; font-size: 1em;"> 5 / 5 </p>
+  </div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br> 
+
+
+    <br>
     <div class="fade-in2 center fa-3x">
         <h2 style="text-align: center; font-size: 1em;" id="Contact"> Let's Connect <br> </h2>
         <a href="https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x"
@@ -645,8 +868,10 @@ elements2.forEach(fader => {
             font-family: 'Poppins', sans-serif; font-family: 'Raleway', sans-serif;  font-family: 'Roboto Condensed', sans-serif; border-radius: 6px; box-shadow: 0 0 4em #023047;">
                 School email: sbiddala@umich.edu <br> Personal email: shriyarbiddala@gmail.com</span>
         </i>
+    </div>
 
-        <script src="Home.js"> </script>
+
+    <script src="Home.js"> </script>
 </body>
 
 </html>
