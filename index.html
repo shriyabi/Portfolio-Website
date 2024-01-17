@@ -94,8 +94,8 @@ elements2.forEach(fader => {
 
     <style>
         .container {
-            display: inline;
-            flex-direction: column;
+            display: flex;
+            align-items: center;
         }
 
         body {
@@ -440,40 +440,143 @@ elements2.forEach(fader => {
     transform: rotate(360deg);
   }
 }*/
-        .image-container {
-            position: relative;
-            display: inline-block;
-            border-radius: 50%;
-        }
 
-        .image-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1.2em solid transparent;
-            border-image: linear-gradient(to right, #FB8500, #011f2f);
-            border-image-slice: 1;
-            box-sizing: border-box;
-            border-radius: 50%;
-            animation: rotate 8s linear infinite;
-        }
-
-        @keyframes rotate {
+        /* @keyframes rotate {
             to {
                 transform: rotate(360deg);
             }
         }
 
-        .image-container img {
-            display: block;
+        .cirlce-image {
+            position: absolute; 
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             z-index: 1;
-            /* Ensure the image is on top of the rotating border */
+        } */
+        .circle-container {
+            position: relative;
+            width: 17vw;
+            height: 29vh;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: rotate 8s infinite;
+        }
+
+        .circle-gradient {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#FB8500, #011f2f, #011f2f, #011f2f, #011f2f);
+        }
+
+        .circle-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15vw;
+            height: 25vh;
+            /* Adjust the size of the image as needed */
+            height: auto;
+            z-index: 1;
+            /* Maintain aspect ratio */
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+        .box__bg {
+            position: relative;
+            z-index: 0;
+            height: 28em;
+            width: 17em;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 12px;
+            display: flex;
+            display: inline;
+        }
+
+        .box__bg::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: #000;
+            background-repeat: no-repeat;
+            background-size: 100%100%, 50%50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(#070707, #687aff);
+            animation: bgRotate 4s linear infinite;
+        }
+
+        .box__bg::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 1px;
+            top: 1px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            background: linear-gradient(#06021d, #06021d);
+            border-radius: 12px;
+        }
+
+        @keyframes bgRotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+            width: 15vw;
+            border: 1em solid #0000;
+            border-radius: 50%;
+            background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
+                    #FB8500,
+                    #011f2f) border-box;
+            animation: rotate 5s linear infinite;
+            overflow: hidden;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+        .containerMove{
+        display: flex;
+    flex-direction: row;
+    
+    /*float: left; */
         }
     </style>
 </head>
@@ -485,9 +588,9 @@ elements2.forEach(fader => {
     <h3 style="text-align: center"> Hello! I am </h3>
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
     <div class="roles"> A.I.-Nerd Engineer Student Web-Developer Equity-Activist Tech-Enthusiast</div>
-    <div class="container fade-in1 left-oriented rotating-border"
-        style="width: 60vw; transition-delay: 3s; margin-top: 10vh; margin-right: 10vw;">
-        <h2> ABOUT ME </h2>
+    <div class="container fade-in1 left-oriented"
+        style="width: 60vw; transition-delay: 3s; margin-top: 10vh; margin-right: 10vw; display: flex;">
+        <h2 style="padding-right: 1em;"> ABOUT ME </h2>
         <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
             Science. I have partaken in multiple research projects at the university level, notably developing a mental
             chatbot, on top of engineering, such as developing the bionic knee with Texas Instruments technology and
@@ -498,8 +601,9 @@ elements2.forEach(fader => {
             solutions. </p>
     </div>
 
-    <div class="container fade-in1 image-container"> <img src="dec5famsh4.jpeg"
-            style="transition-delay: 3s; width: 15vw; height: 25vh; margin-right: 3vw; border-radius: 50%;"> </div>
+    <div class="containerMove fade-in1 box" style = "flex-direction: row; flex: right">
+        <img src="dec5famsh4.jpeg" style="transition-delay: 3s;">
+    </div>
 
     <div class="fade-in2 right-oriented">
         <h2> SKILLS </h2>
@@ -509,7 +613,7 @@ elements2.forEach(fader => {
     </div>
 
     <div class=" fade-in2 left-oriented" style="margin-top: 5vh;">
-        <h2> EDUCATION </h2>
+        <h2 style="padding-right: 1em; display: flex; "> EDUCATION </h2>
         <p> University of Michigan - Ann Arbor </p>
         <p> Bachelor of Science in Computer Science </p>
         <p> GPA: N/A </p>
