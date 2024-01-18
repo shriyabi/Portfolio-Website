@@ -250,7 +250,7 @@
             padding: 20px;
             overflow: -moz-hidden-unscrollable;
             margin-right: 5vw;
-            /*margin: auto;*/
+            margin: auto;
             /*width: 85vw; */
             float: center;
             margin-left: 5vw;
@@ -434,6 +434,7 @@
             align-items: center;
             height: 25em;
             width: 25em;
+            /*need to fix image proportions across different devices*/
             border: 1em solid #0000;
             border-radius: 50%;
             background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
@@ -441,6 +442,7 @@
                     #011f2f) border-box;
             animation: rotate 5s linear infinite;
             overflow: hidden;
+            margin-right: auto; 
         }
 
         .box img {
@@ -584,8 +586,8 @@
             /* display: flex;*/
             justify-content: center;
             align-items: center;
-            height: 40em;
-            width: 40em;
+            height: 40em; 
+            width: 40em; 
             border: 1em solid #0000;
             border-radius: 50%;
             background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
@@ -639,7 +641,7 @@
             solutions. </p>
     </div>
 
-    <div class="container fade-in1 box">
+    <div class="container fade-in1 box" style = "align-self: center;">
         <img src="shriya_pfp.png" style="transition-delay: 2.5s;">
     </div>
 
@@ -728,8 +730,7 @@
             <div class="fade-in2 box2" style="margin-top: 10vh;"> </div>
             <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
         </div> -->
-        <div class="right-inline">
-            <div class="fade-in2 right-oriented" style="margin-top: 10vh; margin-left: auto; margin-right: 5vw">
+            <div class="fade-in2 right-oriented" style="margin-top: 10vh; margin-right: 5vw">
                 <h2> EDUCATION </h2>
                 <p> University of Michigan - Ann Arbor </p>
                 <p> Bachelor of Science in Computer Science </p>
@@ -743,9 +744,10 @@
                     <br> EECS 201: Computer Science Pragmatics
                 </p>
                 <p> Activities: Google Student Developer Club, Miss STEM Careers </p>
-            </div>
         </div>
     </div>
+    <br> 
+    <br>
 
     <!-- <div class=" fade-in2 left-oriented" style="margin-top: 5vh;">
         <h2 style="padding-right: 1em; display: flex; "> Projects Here </h2>
@@ -763,7 +765,7 @@
 
 
 
-    <div class="fade-in2 center fa-3x">
+    <div class="fade-in2 center fa-3x" style = "margin-top: 10vh;">
         <h2 style="text-align: center; font-size: 1em;" id="Contact"> Let's Connect <br> </h2>
         <br>
         <a href="https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x"
