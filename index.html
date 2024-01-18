@@ -75,7 +75,7 @@
             }
 
             to {
-                width: 8em;
+                width: 8em; 
             }
         }
 
@@ -184,7 +184,6 @@
             overflow: scroll;
             align-self: right;
             text-align: right;
-            margin-right: 5vw;
             float: right;
 
         }
@@ -208,7 +207,7 @@
         .fade-in1 {
             opacity: 0;
             transition: opacity 250ms;
-            transition-delay: 3s;
+           /* transition-delay: 3s;*/
 
         }
 
@@ -240,7 +239,7 @@
             margin-top: 10vh;
             padding: 5px;
             display: block;
-            width: 88vw;
+            /*width: 88vw; */
             padding: 5px;
             border-radius: 10px;
             border-style: double;
@@ -250,7 +249,7 @@
             padding: 20px;
             overflow: -moz-hidden-unscrollable;
             margin-right: 5vw;
-            margin: auto;
+            /*margin: auto; 8*/ 
             /*width: 85vw; */
             float: center;
             margin-left: 5vw;
@@ -432,8 +431,9 @@
             /* display: flex;*/
             justify-content: center;
             align-items: center;
-            height: 25em;
-            width: 25em;
+           /* height: 25em;*/
+            height: auto; 
+            width: auto; 
             /*need to fix image proportions across different devices*/
             border: 1em solid #0000;
             border-radius: 50%;
@@ -442,7 +442,7 @@
                     #011f2f) border-box;
             animation: rotate 5s linear infinite;
             overflow: hidden;
-            margin-right: auto; 
+            margin: auto; 
         }
 
         .box img {
@@ -586,8 +586,10 @@
             /* display: flex;*/
             justify-content: center;
             align-items: center;
-            height: 40em; 
-            width: 40em; 
+           /* height: 40em; 
+            width: 40em; */
+            /*width: auto; */
+            height: auto; 
             border: 1em solid #0000;
             border-radius: 50%;
             background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
@@ -596,8 +598,7 @@
             animation: rotate 5s linear infinite;
             overflow: hidden;
             text-align: center; 
-            margin-left: 4vw;
-            margin-right: 3vw; 
+            margin: auto; 
             /*margin-top: 10vh;*/
         }
 
@@ -616,7 +617,14 @@
         .right-inline {
             display: flex; flex-grow: 1; 
         }
-    </style>
+
+        .flex-container { display: flex; }
+
+        .next-to{ 
+            flex: 1; 
+            /*margin: 10em; */
+        }
+        </style>
 </head>
 
 
@@ -628,8 +636,10 @@
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
     <div class="roles"> A.I.-Nerd Engineer Student Web-Developer Equity-Activist Tech-Enthusiast</div>
 
-    <div class="container fade-in1 left-oriented"
-        style="width: 60vw; transition-delay: 2.5s; margin-top: 10vh; margin-right: 10vw;">
+    <div class = "flex-container"> 
+    <div class="next-to fade-in1 left-oriented"
+        style="margin: auto; margin-top: 10vh; margin-right: 10vw; margin-left: 5vw;"> 
+        
         <h2> ABOUT ME </h2>
         <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
             Science. I have partaken in multiple research projects at the university level, notably developing a mental
@@ -641,8 +651,10 @@
             solutions. </p>
     </div>
 
-    <div class="container fade-in1 box" style = "align-self: center;">
-        <img src="shriya_pfp.png" style="transition-delay: 2.5s;">
+    <div class="next-to fade-in1 box" style = "align-self: center; margin-bottom: 20vh; margin-right: 5vw; margin-top: 10vh;">
+        <img src="shriya_pfp.png">
+        <!--style="transition-delay: 2.5s;"-->
+    </div>
     </div>
 
     <!-- <div class="fade-in2 right-oriented">
@@ -654,10 +666,10 @@
 
 
 
-    <div class="container">
+    <div class="flex-container">
         <div>
-            <div class=" slideshow-container left-oriented fade-in2" id="Honors"
-                style="border-width: 1.4em; width: 40vw; margin-top: 10vh;">
+            <div class="next-to slideshow-container left-oriented fade-in2" id="Honors"
+                style="border-width: 1.4em; width: 30vw; margin:auto; margin-top: 20vh; margin-right: 3vw; margin-left: 5vw;">
                 <div class="mySlides fade">
                     <h2 style="text-align: center;"> HONORS </h2>
                     <h3 style="margin-top: -0%; text-align: center;"> <a
@@ -712,7 +724,7 @@
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="center-inline">
+            <div class = "center-inline" style = "align-self: auto; margin-left: 3vw;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -721,16 +733,16 @@
             </div>
         </div>
 
-        <div class = "center-inline"> 
-        <div class=" fade-in2 box2" style = "margin-top: 10vh;">
-        <img src="Screenshot 2024-01-17 at 8.16.59 PM.png" style="transition-delay: 2s;">
+        <div class = "next-to"> 
+        <div class=" fade-in2 box2" style = "margin-top: 20vh;">
+        <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
     </div> </div>
  
-       <!-- <div class="center-inline">
+       <!-- <div class="next-to">
             <div class="fade-in2 box2" style="margin-top: 10vh;"> </div>
             <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
         </div> -->
-            <div class="fade-in2 right-oriented" style="margin-top: 10vh; margin-right: 5vw">
+            <div class="next-to fade-in2 right-oriented" style="margin: auto; margin-left: 3vw; margin-right: 5vw;">
                 <h2> EDUCATION </h2>
                 <p> University of Michigan - Ann Arbor </p>
                 <p> Bachelor of Science in Computer Science </p>
@@ -765,7 +777,7 @@
 
 
 
-    <div class="fade-in2 center fa-3x" style = "margin-top: 10vh;">
+    <div class="fade-in2 center fa-3x" style = "margin-top: 20vh;">
         <h2 style="text-align: center; font-size: 1em;" id="Contact"> Let's Connect <br> </h2>
         <br>
         <a href="https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x"
