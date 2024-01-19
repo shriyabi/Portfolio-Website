@@ -15,7 +15,10 @@
     <script src="https://kit.fontawesome.com/fa913dc807.js" crossorigin="anonymous"></script>
 
     <style>
-        .container {
+       
+
+        @media only screen and (min-width: 768px) {
+            .container {
             display: inline-flex;
         }
 
@@ -386,8 +389,8 @@
         .box__bg {
             position: absolute;
             z-index: 0;
-            height: 25em;
-            width: 35em;
+            height: 17em;
+            width: 17em;
             border-radius: 0.625em;
             overflow: hidden;
             padding: 12px;
@@ -432,8 +435,8 @@
             justify-content: center;
             align-items: center;
             /* height: 25em;*/
-            height: auto;
-            width: auto;
+            height: 25em; 
+            width: 25em;
             /*need to fix image proportions across different devices*/
             border: 1em solid #0000;
             border-radius: 50%;
@@ -442,7 +445,8 @@
                     #011f2f) border-box;
             animation: rotate 5s linear infinite;
             overflow: hidden;
-            margin: auto;
+            margin: auto; 
+            align-self: center;
         }
 
         .box img {
@@ -504,23 +508,26 @@
             right: 0;
             border-radius: 3em 0 0 3em;
         }
+
         .prev {
             left: 0;
             border-radius: 3em 0 0 3em;
         }
-        .prev:hover{
-            color:#011f2f; 
+
+        .prev:hover {
+            color: #011f2f;
         }
-        .next:hover{
-            color:#011f2f; 
+
+        .next:hover {
+            color: #011f2f;
         }
 
 
 
         .dot {
             cursor: pointer;
-            height: 15px;
-            width: 15px;
+            height: 1em;
+            width: 1em;
             margin: 0 2px;
             background-color: rgb(197, 105, 1);
             border-radius: 50%;
@@ -596,10 +603,10 @@
             /* display: flex;*/
             justify-content: center;
             align-items: center;
-            /* height: 40em; 
-            width: 40em; */
+             height: 40em; 
+            width: 40em; 
             /*width: auto; */
-            height: auto;
+           /* height: auto;*/
             border: 1em solid #0000;
             border-radius: 50%;
             background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
@@ -608,7 +615,7 @@
             animation: rotate 5s linear infinite;
             overflow: hidden;
             text-align: center;
-            margin: auto;
+           /* margin: auto;*/
             /*margin-top: 10vh;*/
         }
 
@@ -633,23 +640,24 @@
             display: flex;
         }
 
-        .next-to {
+       /* .next-to {
             flex: 1;
-            /*margin: 10em; */
+            margin: 10em; 
+        } */
+
+
+        .flex-container2 {
+            display: flex;
+           /* flex-wrap: wrap;*/
+            justify-content: center;
         }
 
-       
-.flex-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-}
-
-.project-box {
-    /* flex: 1 0 30%; */ 
-    width: 19.5vw; 
+        .project-box {
+            /* flex: 1 0 30%; */
+            width: 20vw;
+            height: 20vh;
             padding: 5px;
-            display:inline-block; 
+            display: inline-block;
             padding: 5px;
             border-radius: 10px;
             border-style: double;
@@ -659,11 +667,12 @@
             overflow: -moz-hidden-unscrollable;
             text-align: center;
             box-shadow: 0 0 1em #6dc7de;
-            margin-left:auto; 
-            margin-right:auto; 
-            padding: 2em; 
-}
-.project-box:hover {
+            margin-left: 1vw;
+            margin-right: 1vw;
+            padding: 2em;
+        }
+
+        .project-box:hover {
             background-color: #177c96;
             border-color: #023047;
             border-width: 0.4em;
@@ -671,7 +680,7 @@
             box-shadow: 0 0 2em #177c96;
         }
 
-
+        }
     </style>
 </head>
 
@@ -684,9 +693,9 @@
     <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
     <div class="roles"> A.I.-Nerd Engineer Student Web-Developer Equity-Activist Tech-Enthusiast</div>
 
-    <div class="flex-container">
-        <div class="next-to fade-in1 left-oriented"
-            style="margin: auto; margin-top: 10vh; margin-right: 10vw; margin-left: 5vw;">
+    <div class="container">
+        <div class="fade-in1 left-oriented"
+            style="width:50vw; margin-top: 10vh; margin:auto;  margin-left: 5vw;">
 
             <h2> ABOUT ME </h2>
             <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
@@ -700,11 +709,11 @@
                 to
                 combine both my technological and activist background to develop real-world tecnological, equitable
                 solutions.
-            </p>
-        </div>
+            </p> 
+        </div> 
 
-        <div class="next-to fade-in1 box"
-            style="align-self: center; margin-bottom: 20vh; margin-right: 5vw; margin-top: 10vh;">
+        <div class="fade-in1 box"
+            style="align-self: center; margin-bottom: 20vh; margin-top: 10vh; transform: translateX(55%);">
             <img src="shriya_pfp.png">
             <!--style="transition-delay: 2.5s;"-->
         </div>
@@ -717,12 +726,9 @@
         </p>
     </div> -->
 
-
-
-    <div class="flex-container">
-        <div>
-            <div class="next-to slideshow-container left-oriented fade-in2" id="Honors"
-                style="border-width: 1.4em; width: 30vw; margin:auto; margin-top: 20vh; margin-right: 2vw; margin-left: 5vw;">
+    <div>
+            <div class="next-to slideshow-container center fade-in2" id="Honors"
+                style="border-width: 1.4em; margin-top: 10vh; margin-right: 5vw; margin-left: 5vw;">
                 <div class="mySlides fade">
                     <h2 style="text-align: center;"> HONORS </h2>
                     <h3 style="margin-top: -0%; text-align: center;"> <a
@@ -784,19 +790,15 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
                 <span class="dot" onclick="currentSlide(5)"></span>
             </div>
-        </div>
+    </div>
 
-        <div class="next-to">
-            <div class=" fade-in2 box2" style="margin-top: 20vh;">
+
+    <div class="container" style = "margin-top: 12vh;">
+            <div class=" fade-in2 box2" style="margin-top: 10vh; margin-left: 14vw; margin-right: 14vw;">
                 <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
             </div>
-        </div>
 
-        <!-- <div class="next-to">
-            <div class="fade-in2 box2" style="margin-top: 10vh;"> </div>
-            <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
-        </div> -->
-        <div class="next-to fade-in1 right-oriented" style="margin: auto; margin-left: 2vw; margin-right: 5vw;">
+        <div class="fade-in2 right-oriented" style="margin: auto; margin-right: 5vw; margin-top: 10vh; width: 35vw;">
             <h2> EDUCATION </h2>
             <p> University of Michigan - Ann Arbor </p>
             <p> Bachelor of Science in Computer Science </p>
@@ -815,44 +817,37 @@
     <br>
     <br>
 
-    <h2 class = "fade-in2" style = "margin-top: 15vh; text-align: center;" id = "Projects">PROJECTS</h2>
-    <div class="flex-container fade-in2" style="margin-top: 2vh; margin-left: 5vw; margin-right: 5vw;"> 
-                <div class="project-box">
-            <h3 style = "color: #dcf4fc; margin: auto;">Chatbot for Mental Health Awareness</h3>
-            <p> A conversational A.I.-based agent utilizing generative learning and Google Search API to provide responses
-            to mental health questions and respective links to resources. </p>
-            <iframe width="auto" height="auto" src="https://www.wevideo.com/view/3252017933" style = "margin: auto; margin-top: 2vh;"> </iframe>
-            <p style = "font-size: 0.625em; color: #FB8500"> SKILLS: </p>
-            <p style = "font-size: 0.625em; color: #FFB703"> PyTorch, Kaggle, Cloud-instance, Google Search API</p>
+    <h2 class="fade-in2" style="margin-top: 20vh; text-align: center;" id="Projects">PROJECTS</h2>
+    <div class="flex-container fade-in2" style="margin-top: 2vh; margin-left: 5vw; margin-right: 5vw; margin: auto; align-self: center;">
+        <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;">Chatbot for Mental Health Awareness</h3>
+            <p style = "font-size: 1.5em;"> A conversational A.I.-based agent utilizing generative learning and Google Search API to provide
+                responses
+                to mental health questions and respective links to resources. </p>
+            <iframe style = "width: 12vw; height: auto; color:rgb(197, 105, 1);" src ="https://www.wevideo.com/view/3252017933"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <p style="font-size: 1em; color: #FB8500; text-align: left; padding-top: 5px; padding-left: 5px;"> SKILLS: </p>
+            <p style="font-size: 1em; color: #FFB703; text-align: left; padding-left: 5px;"> PyTorch, Kaggle, Cloud-instance, Google Search API</p>
         </div>
         <div class="project-box">
-            <h3 style = "color: #dcf4fc; margin: auto;"> BioKnee 1.0 </h3>
+            <h3 style="color: #dcf4fc; margin: auto;"> BioKnee 1.0 </h3>
             <p> A mechanical knee developed with and sponsored by Texas Instruments technology in order to help with
-            knee rehabilitation, especially with ACL tears. </p>
-            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/AcX9qemFgyg" style = "margin: auto; margin-top: 2vh;"> </iframe>
+                knee rehabilitation, especially with ACL tears. </p>
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/AcX9qemFgyg"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
         </div>
         <div class="project-box">
-            <h3 style = "color: #dcf4fc; margin: auto;"> OneVote</h3>
-            <p> A web-application aiming to raise awareness about local elections and policies via providing young adults
-            with a conversational agent to ask questions and a page to direct them to local polling stations, elections,
-            and websites of current and new candidates. </p>
-            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/-eGkraEZ6HA" style = "margin: auto; margin-top: 2vh;"> </iframe>
+            <h3 style="color: #dcf4fc; margin: auto;"> OneVote</h3>
+            <p> A web-application aiming to raise awareness about local elections and policies via providing young
+                adults
+                with a conversational agent to ask questions and a page to direct them to local polling stations,
+                elections,
+                and websites of current and new candidates. </p>
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/-eGkraEZ6HA"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
         </div>
     </div>
 
-
-    <div class="flex-container fade-in2" style="margin-top: 10vh; margin-left: 5vw; margin-right: 5vw;"> 
-    <div class="project-box">
-            <h3 style = "color: #dcf4fc; margin: auto;"> A.I. Handwriting Transformer Model </h3>
-            <p> An application with a visually-appleasing user interface with an integrated model developed 
-                using OpenCV and PyTorch to detect handwritten components and convert into a .txt file. </p>
-        </div>
-        <div class="project-box">
-            <h3 style = "color: #dcf4fc; margin: auto;"> PenguJump </h3>
-            <p> An interactive game developed with GreenFoot API and Java utilizing object-oriented programming and
-            inheritance. </p>
-        </div>
-        </div>
 
 
 
