@@ -174,13 +174,13 @@
 
             display: block;
             /* width: 30vw; */
-            padding: 0.3125em;
+            padding-right: 1.25em;
             border-radius: 0.625em;
             border-style: double;
             border-color: #219EBC;
             border-width: 0.625em;
             background-color: #023047;
-            padding: 1.25em;
+            padding-left: 0.5em;
             overflow: scroll;
             align-self: right;
             text-align: right;
@@ -502,7 +502,17 @@
 
         .next {
             right: 0;
-            border-radius: 3px 0 0 3px;
+            border-radius: 3em 0 0 3em;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3em 0 0 3em;
+        }
+        .prev:hover{
+            color:#011f2f; 
+        }
+        .next:hover{
+            color:#011f2f; 
         }
 
 
@@ -627,12 +637,47 @@
             flex: 1;
             /*margin: 10em; */
         }
+
+       
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.project-box {
+    /* flex: 1 0 30%; */ 
+    width: 19.5vw; 
+            padding: 5px;
+            display:inline-block; 
+            padding: 5px;
+            border-radius: 10px;
+            border-style: double;
+            border-color: #219EBC;
+            border-width: 0.5em;
+            background-color: #023047;
+            overflow: -moz-hidden-unscrollable;
+            text-align: center;
+            box-shadow: 0 0 1em #6dc7de;
+            margin-left:auto; 
+            margin-right:auto; 
+            padding: 2em; 
+}
+.project-box:hover {
+            background-color: #177c96;
+            border-color: #023047;
+            border-width: 0.4em;
+            transition: 0.2s;
+            box-shadow: 0 0 2em #177c96;
+        }
+
+
     </style>
 </head>
 
 
 <body>
-    <h4> <a href="Projects.html" class="link-orange"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#Honors"
+    <h4> <a href="#Projects" class="link-orange"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#Honors"
             class="link-orange"> HONORS </a> &nbsp;
         &nbsp; &nbsp; &nbsp; <a href="#Contact" class="link-orange"> CONTACT </a> </h4>
     <h3 style="text-align: center"> Hello! I am </h3>
@@ -677,7 +722,7 @@
     <div class="flex-container">
         <div>
             <div class="next-to slideshow-container left-oriented fade-in2" id="Honors"
-                style="border-width: 1.4em; width: 30vw; margin:auto; margin-top: 20vh; margin-right: 3vw; margin-left: 5vw;">
+                style="border-width: 1.4em; width: 30vw; margin:auto; margin-top: 20vh; margin-right: 2vw; margin-left: 5vw;">
                 <div class="mySlides fade">
                     <h2 style="text-align: center;"> HONORS </h2>
                     <h3 style="margin-top: -0%; text-align: center;"> <a
@@ -751,7 +796,7 @@
             <div class="fade-in2 box2" style="margin-top: 10vh;"> </div>
             <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
         </div> -->
-        <div class="next-to fade-in2 right-oriented" style="margin: auto; margin-left: 3vw; margin-right: 5vw;">
+        <div class="next-to fade-in1 right-oriented" style="margin: auto; margin-left: 2vw; margin-right: 5vw;">
             <h2> EDUCATION </h2>
             <p> University of Michigan - Ann Arbor </p>
             <p> Bachelor of Science in Computer Science </p>
@@ -770,19 +815,48 @@
     <br>
     <br>
 
-    <!-- <div class=" fade-in2 left-oriented" style="margin-top: 5vh;">
-        <h2 style="padding-right: 1em; display: flex; "> Projects Here </h2>
-        <p> University of Michigan - Ann Arbor </p>
-        <p> Bachelor of Science in Computer Science </p>
-        <p> GPA: N/A </p>
-        <p> Expected Graduation: April 2026 </p>
-        <p> Coursework: <br> EECS 280: Programming and Data Structures <br> EECS 203: Discrete Mathematics <br> ENGR
-            100: Robotics Mechanisms <br> ROB 101: Computational Linear Algebra <br> EECS 281: Data Structures and
-            Algorithms
-            <br> EECS 201: Computer Science Pragmatics
-        </p>
-        <p> Activities: Google Student Developer Club, Miss STEM Careers </p>
-    </div> -->
+    <h2 class = "fade-in2" style = "margin-top: 15vh; text-align: center;" id = "Projects">PROJECTS</h2>
+    <div class="flex-container fade-in2" style="margin-top: 2vh; margin-left: 5vw; margin-right: 5vw;"> 
+                <div class="project-box">
+            <h3 style = "color: #dcf4fc; margin: auto;">Chatbot for Mental Health Awareness</h3>
+            <p> A conversational A.I.-based agent utilizing generative learning and Google Search API to provide responses
+            to mental health questions and respective links to resources. </p>
+            <iframe width="auto" height="auto" src="https://www.wevideo.com/view/3252017933" style = "margin: auto; margin-top: 2vh;"> </iframe>
+            <p style = "font-size: 0.625em; color: #FB8500"> SKILLS: </p>
+            <p style = "font-size: 0.625em; color: #FFB703"> PyTorch, Kaggle, Cloud-instance, Google Search API</p>
+        </div>
+        <div class="project-box">
+            <h3 style = "color: #dcf4fc; margin: auto;"> BioKnee 1.0 </h3>
+            <p> A mechanical knee developed with and sponsored by Texas Instruments technology in order to help with
+            knee rehabilitation, especially with ACL tears. </p>
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/AcX9qemFgyg" style = "margin: auto; margin-top: 2vh;"> </iframe>
+        </div>
+        <div class="project-box">
+            <h3 style = "color: #dcf4fc; margin: auto;"> OneVote</h3>
+            <p> A web-application aiming to raise awareness about local elections and policies via providing young adults
+            with a conversational agent to ask questions and a page to direct them to local polling stations, elections,
+            and websites of current and new candidates. </p>
+            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/-eGkraEZ6HA" style = "margin: auto; margin-top: 2vh;"> </iframe>
+        </div>
+    </div>
+
+
+    <div class="flex-container fade-in2" style="margin-top: 10vh; margin-left: 5vw; margin-right: 5vw;"> 
+    <div class="project-box">
+            <h3 style = "color: #dcf4fc; margin: auto;"> A.I. Handwriting Transformer Model </h3>
+            <p> An application with a visually-appleasing user interface with an integrated model developed 
+                using OpenCV and PyTorch to detect handwritten components and convert into a .txt file. </p>
+        </div>
+        <div class="project-box">
+            <h3 style = "color: #dcf4fc; margin: auto;"> PenguJump </h3>
+            <p> An interactive game developed with GreenFoot API and Java utilizing object-oriented programming and
+            inheritance. </p>
+        </div>
+        </div>
+
+
+
+
 
 
 
