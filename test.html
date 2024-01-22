@@ -4,29 +4,1202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query for MacBooks Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&family=Poppins&family=Raleway:wght@300;400&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa913dc807.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-    <!-- Your HTML content here -->
-
     <style>
         /* Styles for default screen sizes */
-        h1 {
-            color: blue;
-            font-size: 30px;
-        }
+        @media only screen and (max-width: 450px) {
+            /*.container {
+                display: inline;
+            }
 
-        /* Media query for MacBooks with a screen width between 1280px and 1440px */
-        @media only screen and (min-width: 900px) and (max-width: 4000px) {
+            .container-about-me {
+                margin-top: 50vh;
+            }
+
+            .container2 {
+                display: inline-block;
+            } */
+
+            body {
+                background-color: #011f2f;
+                /*#0365A6;*/
+                overflow: scroll;
+            }
+
+            .title {
+                margin-top: 1vh;
+            }
+
             h1 {
-                color: red;
-                font-size: 24px;
+                text-align: center;
+                color: #dcf4fc;
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-size: 5em;
+            }
+
+            .line-1 {
+                position: center;
+                top: 50%;
+                width: 60vm;
+                margin: 0 auto;
+                border-right: 2px solid rgba(255, 255, 255, .75);
+                font-size: 180%;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                transform: translateY(-50%);
+                margin-top: 1vh;
+                color: #8ECAE6;
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-size: 2em;
+                padding-top: 1vh;
+            }
+
+            /* Animation */
+            .anim-typewriter {
+                animation: typewriter 2s steps(44) 1s 1 normal both,
+                    blinkTextCursor 500ms steps(44) infinite normal;
+            }
+
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 9em;
+                }
+            }
+
+            @keyframes blinkTextCursor {
+                from {
+                    border-right-color: #FB8500;
+                }
+
+                to {
+                    border-right-color: transparent;
+                }
+            }
+
+            h2 {
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+                color: #FB8500;
+                padding: 5px;
+                font-size: 1em;
+                text-align: center;
+            }
+
+            h3 {
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+                color: #FFB703;
+                padding: 5px;
+                font-size: 1em;
+                margin-top: 20vh;
+                text-align: center;
+            }
+
+            h4 {
+                margin-top: 2vh;
+                text-align: center;
+                color: #219EBC;
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-size: 0.8em;
+                opacity: 0;
+                animation: fadeIn 4s 3s forwards;
+                text-align: center; 
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+
+            .left-oriented {
+                padding: 0.3125em;
+                display: inline-block;
+                /* margin-top: 5vh; */
+                border-radius: 0.625em;
+                border-style: double;
+                border-color: #219EBC;
+                border-width: 0.625em;
+                background-color: #023047;
+                padding: 1.25em;
+                /*overflow: scroll;*/
+                align-self: center;
+                margin: auto;
+                /* float: left; */
+
+            }
+
+            .left-oriented:hover {
+                background-color: #023047;
+                color: #8ECAE6;
+                border-color: #8ECAE6;
+                transition: 0.2s;
+                box-shadow: 0 0 4em #177c96;
+            }
+
+            .left-oriented:hover {
+                background-color: #177c96;
+                border-color: #023047;
+                border-width: 1.6em;
+                transition: 0.2s;
+                box-shadow: 0 0 4em #177c96;
+            }
+
+
+            .right-oriented {
+                display: block;
+                /* width: 30vw; */
+                padding-right: 1.25em;
+                border-radius: 0.625em;
+                border-style: double;
+                border-color: #219EBC;
+                border-width: 0.625em;
+                background-color: #023047;
+                padding-left: 0.5em;
+                /* overflow: scroll;*/
+                align-self: center;
+                text-align: center;
+                float: center;
+                margin: auto;
+
+            }
+
+            .right-oriented:hover {
+                background-color: #177c96;
+                border-color: #023047;
+                border-width: 20px;
+                transition: 0.2s;
+                box-shadow: 0 0 2em #177c96;
+            }
+
+            .right-oriented:hover {
+                background-color: #177c96;
+                border-color: #023047;
+                border-width: 1.6em;
+                transition: 0.2s;
+                box-shadow: 0 0 4em #177c96;
+            }
+
+            .fade-in1 {
+                opacity: 0;
+                transition: opacity 250ms;
+                /* transition-delay: 3s;*/
+
+            }
+
+            .fade-in1.appear {
+                opacity: 1;
+            }
+
+            .fade-in2 {
+                opacity: 0;
+                transition: opacity 250ms ease-in;
+            }
+
+
+
+            .fade-in2.appear {
+                opacity: 1;
+            }
+
+            p {
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+                color: #FFB703;
+                font-size: 0.8em;
+            }
+
+            .center {
+                margin-top: 10vh;
+                padding: 5px;
+                display: block;
+                /*width: 88vw; */
+                padding: 5px;
+                border-radius: 10px;
+                border-style: double;
+                border-color: #219EBC;
+                border-width: 0.5em;
+                background-color: #023047;
+                padding: 20px;
+                overflow: -moz-hidden-unscrollable;
+                /*margin: auto; 8*/
+                /*width: 85vw; */
+                float: center;
+                margin: auto;
+                text-align: center;
+            }
+
+            a:link,
+            a.visited {
+                text-decoration: none;
+            }
+
+            .center:hover {
+                background-color: #177c96;
+                border-color: #023047;
+                border-width: 0.4em;
+                transition: 0.2s;
+                box-shadow: 0 0 2em #177c96;
+            }
+
+            .link-orange:link {
+                color: #FB8500;
+            }
+
+            .link-orange:visited {
+                color: #FB8500;
+            }
+
+            .link-orange:hover {
+                color: #FFB703;
+            }
+
+            .link-orange:active {
+                color: #FB8500;
+            }
+
+            .link-orange:link,
+            .link-orange:visited {
+                text-decoration: none;
+            }
+
+            .link-blue:link {
+                color: #dcf4fc;
+            }
+
+            .link-blue:visited {
+                color: #dcf4fc;
+            }
+
+            .link-blue:hover {
+                color: #023047;
+            }
+
+            .link-blue:active {
+                color: #023047;
+            }
+
+            .link-blue:link,
+            .link-blue:visited {
+                text-decoration: none;
+            }
+
+
+
+            .roles {
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+                color: #FB8500;
+                font-size: 0.8em;
+                text-align: center;
+                opacity: 0;
+                margin-bottom: 20vh;
+            }
+
+
+            .fa-instagram {
+                color: #c99b26;
+            }
+
+            .fa-linkedin {
+                color: #c99b26;
+            }
+
+            .fa-google {
+                color: #c99b26;
+                cursor: pointer;
+            }
+
+            .fa-github {
+                color: #c99b26;
+                transition: 0.1s;
+            }
+
+            .fa-github:hover {
+                color: #023047;
+                animation: none;
+            }
+
+            .fa-linkedin:hover {
+                color: #023047;
+                transition: 0.1s;
+                animation: none;
+            }
+
+            .fa-google:hover {
+                color: #023047;
+                /* Adjust the color of the text as needed */
+                transition: 0.1s;
+                animation: none;
+            }
+
+            .fa-instagram:hover {
+                color: #023047;
+                transition: 0.1s;
+                animation: none;
+            }
+
+            .google-hover-text {
+                visibility: hidden;
+                box-shadow: 0 0 4em #023047;
+                color: #FB8500;
+                background-color: #fb86008d;
+                text-align: left;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .fa-google:hover .google-hover-text {
+                visibility: visible;
+            }
+
+
+            .box__bg {
+                position: absolute;
+                z-index: 0;
+                height: 5em;
+                width: 5em;
+                border-radius: 0.625em;
+                overflow: hidden;
+                padding: 12px;
+            }
+
+            .box__bg::before {
+                content: "";
+                position: absolute;
+                z-index: -2;
+                left: -50%;
+                top: -50%;
+                width: 200%;
+                height: 200%;
+                background-color: #000;
+                background-repeat: no-repeat;
+                background-size: 100%100%, 50%50%;
+                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                background-image: linear-gradient(#070707, #FFFFFF);
+                animation: bgRotate 4s linear infinite;
+            }
+
+            .box__bg::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 1px;
+                top: 1px;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                background: linear-gradient(#06021d, #06021d);
+                border-radius: 12px;
+            }
+
+            @keyframes bgRotate {
+                100% {
+                    transform: rotate(1turn);
+                }
+            }
+
+            .box {
+                /* display: flex;*/
+                justify-content: center;
+                align-items: center;
+                /* height: 25em;*/
+                height: 15em;
+                width: 15em;
+                /*need to fix image proportions across different devices*/
+                border: 1em solid #0000;
+                border-radius: 50%;
+                background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
+                        #FB8500,
+                        #011f2f) border-box;
+                animation: rotate 5s linear infinite;
+                overflow: hidden;
+                align-self:center; 
+                text-align: center; 
+                margin: auto;
+                /* transform: translateX(70%); */
+            }
+
+            .box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .box3__bg {
+                position: absolute;
+                z-index: 0;
+                height: 17em;
+                width: 17em;
+                border-radius: 0.625em;
+                overflow: hidden;
+                padding: 12px;
+            }
+
+            .box3__bg::before {
+                content: "";
+                position: absolute;
+                z-index: -2;
+                left: -50%;
+                top: -50%;
+                width: 200%;
+                height: 200%;
+                background-color: #000;
+                background-repeat: no-repeat;
+                background-size: 100%100%, 50%50%;
+                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                background-image: linear-gradient(#070707, #FFFFFF);
+                animation: bgRotate 4s linear infinite;
+            }
+
+            .box3__bg::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 1px;
+                top: 1px;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                background: linear-gradient(#06021d, #06021d);
+                border-radius: 12px;
+            }
+
+            @keyframes bgRotate {
+                100% {
+                    transform: rotate(1turn);
+                }
+            }
+
+            .box3 {
+                /* display: flex;*/
+                justify-content: center;
+                align-items: center;
+                /* height: 25em;*/
+                height: 40%;
+                width: 40%;
+                /*need to fix image proportions across different devices*/
+                border: 0.4em solid #0000;
+                background: linear-gradient(#219EBC, #011f2f) padding-box, linear-gradient(var(--angle),
+                        #219EBC,
+                        #011f2f) border-box;
+                animation: rotate 5s linear infinite;
+                overflow: hidden;
+                margin: auto;
+                align-self: center;
+            }
+
+            .box3 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @keyframes rotate {
+                to {
+                    --angle: 360deg;
+                }
+            }
+
+            @property --angle {
+                syntax: "<angle>";
+                initial-value: 0deg;
+                inherits: false;
+            }
+
+           /* .containerMove {
+                display: flex;
+                flex-direction: row;
+
+                /*float: left; */
+           /* } */
+
+            /*slide show for awards*/
+            .slideshow-container {
+                position: relative;
+                /* width: 85vm;
+            margin-right: 3vm;
+            margin-left: 3vm; */
+                border-width: 1em;
+            }
+
+            .mySlides {
+                display: none;
+            }
+
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                /*top: 50%;*/
+                /*width: auto;*/
+                margin-top: -2em;
+                padding: 1em;
+                color: #6dc7de;
+                font-weight: bold;
+                font-size: 1.5em;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3em 0 0 3em;
+            }
+
+            .prev {
+                left: 0;
+                border-radius: 3em 0 0 3em;
+            }
+
+            .prev:hover {
+                color: #011f2f;
+            }
+
+            .next:hover {
+                color: #011f2f;
+            }
+
+
+
+            .dot {
+                cursor: pointer;
+                height: 1em;
+                width: 1em;
+                margin: 0 2px;
+                background-color: rgb(197, 105, 1);
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active,
+            .dot:hover {
+                background-color: #e4a403;
+            }
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: .4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            .box2__bg {
+                position: absolute;
+                z-index: 0;
+                height: 15em;
+                width: 15em;
+                border-radius: 0.625em;
+                overflow: hidden;
+                padding: 12px;
+            }
+
+            .box2__bg::before {
+                content: "";
+                position: absolute;
+                z-index: -2;
+                left: -50%;
+                top: -50%;
+                width: 200%;
+                height: 200%;
+                background-color: #000;
+                background-repeat: no-repeat;
+                background-size: 100%100%, 50%50%;
+                background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+                background-image: linear-gradient(#070707, #FFFFFF);
+                animation: bgRotate 4s linear infinite;
+            }
+
+            .box2__bg::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 1px;
+                top: 1px;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                background: linear-gradient(#06021d, #06021d);
+                border-radius: 12px;
+            }
+
+            @keyframes bgRotate {
+                100% {
+                    transform: rotate(1turn);
+                }
+            }
+
+            .box2 {
+                /* display: flex;*/
+                justify-content: center;
+                align-items: center;
+                height: 15em;
+                width: 15em;
+                /*width: auto; */
+                /* height: auto;*/
+                border: 1em solid #0000;
+                border-radius: 50%;
+                background: linear-gradient(#FB8500, #011f2f) padding-box, linear-gradient(var(--angle),
+                        #FFB703,
+                        #011f2f) border-box;
+                animation: rotate 5s linear infinite;
+                overflow: hidden;
+                text-align: center;
+                /* margin: auto;*/
+                /*margin-top: 10vh;*/
+                margin: auto;
+            }
+
+            .box2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                text-align: center;
+                border-radius: 50%;
+            }
+
+            .center-inline {
+                text-align: center;
+            }
+
+           /* .right-inline {
+                display: flex;
+                flex-grow: 1;
+            } */
+
+            /*.flex-container {
+                display: flex;
+            } */
+
+            /* .next-to {
+            flex: 1;
+            margin: 10em; 
+        } */
+
+
+          /*  .flex-container2 {
+                display: flex;
+                /* flex-wrap: wrap;*/
+               /* justify-content: center;
+            } */
+
+            .project-box {
+                /* flex: 1 0 30%; */
+                width: auto; 
+                height: 50vh;
+                padding: 5px;
+                padding: 5px;
+                border-radius: 10px;
+                border-style: double;
+                border-color: #219EBC;
+                border-width: 1em;
+                background-color: #023047;
+                overflow: -moz-hidden-unscrollable;
+                text-align: center;
+                box-shadow: 0 0 1em #6dc7de;
+                padding: 0.4em;
+                margin: auto;
+                margin-top: 2vh; 
+            }
+
+            .project-box:hover {
+                background-color: #177c96;
+                border-color: #023047;
+                border-width: 1.1em;
+                transition: 0.2s;
+                box-shadow: 0 0 3em #177c96;
+            }
+
+            .project-text {
+                font-size: 0.5em;
+                color: #FB8500;
+                text-align: left;
+                padding-top: 5px;
+                padding-left: 5px;
+                font-family: 'Dosis', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Raleway', sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+
+            .skill-text {
+                font-size: 0.5em;
+                color: #FFB703;
+                text-align: left;
+                padding-left: 5px;
+            }
+
+            .contact {
+                background-color: #8ECAE6;
+                box-shadow: 0 0 2em #219EBC;
+                text-align: center;
+                width: 100%;
+                top: 100px;
+                position: relative;
+                margin-top: 30vh;
+            }
+
+            .project_desc {
+                font-size: 0.6em;
+            }
+
+            .about-me {
+                width: auto;
+                margin: auto;
+                margin-top: 20vh;
+                animation-delay: 2s; 
+            }
+
+            .box-dim {
+                margin-top: 5vh;
+            }
+
+            .educimg {
+                margin-top: 40vh;
+                float: center; 
+            }
+
+            .education {
+                margin-top: 5vh;
+                float: center;
+                width: auto; 
+            }
+
+            .proj-cont {
+                margin-top: 40vh;
+            }
+
+            .proj-box-cont {
+                margin-top: 2vh;
+                margin: auto;
+                align-self: center;
+            }
+
+            iframe {
+                width: 90%;
+                height: 40%;
+            }
+
+            .honors-cont {
+                border-width: 1.4em;
+                margin-top: 40vh;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-text{
+                text-align: center; 
+                font-size: 0.5em; 
+                padding: 2em; 
+                color:rgb(194, 103, 0); 
+            }
+
+            .copy-right-text{
+                color:#023047; 
+                font-size: 0.25em; 
+                text-align: left; 
+                padding-left: 0.625em; 
+                padding-bottom: 0.625em;
             }
         }
     </style>
 
-    <h1>Hello, World!</h1>
-    <p>This is an example HTML document with a media query for MacBooks.</p>
+    <h4> <a href="#Projects" class="link-orange"> PROJECTS </a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#Honors"
+            class="link-orange"> HONORS </a> &nbsp;
+        &nbsp; &nbsp; &nbsp; <a href="#Contact" class="link-orange"> CONTACT </a> </h4>
+    <h3 style="text-align: center"> Hello! I am </h3>
+    <h1 class="line-1 anim-typewriter title"> SHRIYA BIDDALA </h1>
+    <div class="roles"> A.I.-Nerd Engineer Student Web-Developer Equity-Activist Tech-Enthusiast</div>
+    <div class="container-about-me">
+        <div class="fade-in1 center about-me">
+            <h2> ABOUT ME </h2>
+            <p> Hello! I am a student at University of Michigan's College of Engineering aspiring to pursue Computer
+                Science. I have partaken in multiple research projects at the university level, notably developing a
+                mental chatbot, on top of engineering, such as developing the bionic knee with Texas Instruments technology and
+                Lego Mindstromer bricks. <br> My interests lie within artificial intelligence and it's promissing
+                applications in different industries, such as cloud computing, intelligent devices, and data science.
+                <br> I
+                also am a big equity activist who pushes for equity and diversity in the technology sector and aspires
+                to
+                combine both my technological and activist background to develop real-world tecnological, equitable
+                solutions.
+            </p>
+        </div>
 
+        <div class="fade-in1 box box-dim">
+            <img src="shriya_pfp.png">
+            <!--style="transition-delay: 2.5s;"-->
+        </div>
+    </div>
+
+
+    <div class="flex-container educimg">
+        <div class="fade-in2 box2">
+            <img src="Screenshot 2024-01-17 at 8.16.59 PM.png">
+        </div>
+        <div class="fade-in2 right-oriented education">
+            <h2> EDUCATION </h2>
+            <p> University of Michigan - Ann Arbor </p>
+            <p> Bachelor of Science in Computer Science </p>
+            <p> GPA: 3.675 </p>
+            <p> Expected Graduation: April 2026 </p>
+            <p> Coursework: <br> EECS 280: Programming and Data Structures <br> EECS 203: Discrete Mathematics <br>
+                ENGR
+                100: Robotics Mechanisms <br> ROB 101: Computational Linear Algebra <br> EECS 281: Data Structures
+                and
+                Algorithms
+                <br> EECS 201: Computer Science Pragmatics
+            </p>
+            <p> Activities: Google Student Developer Club, Miss STEM Careers </p>
+        </div>
+    </div>
+
+
+    <h2 class="fade-in2 proj-cont" style="text-align: center;" id="Projects">PROJECTS</h2>
+    <div class = flex-container fade-in2 proj-box-cont>
+    <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;">Chatbot for Mental Health Awareness</h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A conversational A.I.-based agent utilizing generative learning and Google
+                    Search API to provide
+                    responses
+                    to mental health questions and respective links to resources. </p>
+            </div>
+            <iframe style="color:rgb(197, 105, 1);" src="https://www.wevideo.com/view/3252017933"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <div style="height: 10%">
+                <p class="project-text">
+                    SKILLS:
+                </p>
+                <p class="skill-text"> PyTorch, Kaggle,
+                    Cloud-instance, Google Search API</p>
+            </div>
+    </div>
+    <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;"> BioKnee 1.0 </h3>
+
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A conversational A.I.-based agent utilizing generative learning and Google
+                    Search API to provide
+                    responses
+                    to mental health questions and respective links to resources. </p>
+            </div>
+
+
+            <iframe color:rgb(197, 105, 1);" src="https://www.youtube.com/embed/AcX9qemFgyg"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <br>
+            <div style="height: 10%">
+                <p class="project-text">
+                    SKILLS:
+                </p>
+                <p class="skill-text"> Electrical Circuits,
+                    Python, Programming </p>
+            </div>
+        </div>
+        <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;"> OneVote</h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A web application designed to raise awareness about local elections and
+                    policies
+                    among young adults. Features an conversational agent for answering questions and a page to guide
+                    users
+                    to local polling stations, provide information on ongoing elections, and access websites of current
+                    and
+                    new candidates. </p>
+            </div>
+            <iframe style="color:rgb(197, 105, 1);" src="https://www.youtube.com/embed/-eGkraEZ6HA"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <br>
+            <div style="height: 10%;">
+                <p class="project-text" style="font-size: auto;">
+                    SKILLS:
+                </p>
+                <p class="skill-text" style="font-size: auto;"> Electrical Circuits,
+                    Python, Programming </p>
+            </div>
+        </div>
+    <div class = "project-box"> Help </div>
+    <div class = "project-box"> Help </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <div class="flex-container fade-in2 proj-box-cont">
+        <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;">Chatbot for Mental Health Awareness</h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A conversational A.I.-based agent utilizing generative learning and Google
+                    Search API to provide
+                    responses
+                    to mental health questions and respective links to resources. </p>
+            </div>
+            <iframe style="color:rgb(197, 105, 1);" src="https://www.wevideo.com/view/3252017933"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <div style="height: 10%">
+                <p class="project-text">
+                    SKILLS:
+                </p>
+                <p class="skill-text"> PyTorch, Kaggle,
+                    Cloud-instance, Google Search API</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;"> BioKnee 1.0 </h3>
+
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A conversational A.I.-based agent utilizing generative learning and Google
+                    Search API to provide
+                    responses
+                    to mental health questions and respective links to resources. </p>
+            </div>
+
+
+            <iframe color:rgb(197, 105, 1);" src="https://www.youtube.com/embed/AcX9qemFgyg"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <br>
+            <div style="height: 10%">
+                <p class="project-text">
+                    SKILLS:
+                </p>
+                <p class="skill-text"> Electrical Circuits,
+                    Python, Programming </p>
+            </div>
+        </div>
+        <div class="project-box">
+            <h3 style="color: #dcf4fc; margin: auto;"> OneVote</h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> A web application designed to raise awareness about local elections and
+                    policies
+                    among young adults. Features an conversational agent for answering questions and a page to guide
+                    users
+                    to local polling stations, provide information on ongoing elections, and access websites of current
+                    and
+                    new candidates. </p>
+            </div>
+            <iframe style="color:rgb(197, 105, 1);" src="https://www.youtube.com/embed/-eGkraEZ6HA"
+                style="margin: auto; margin-top: 2vh;"> </iframe>
+            <br>
+            <div style="height: 10%;">
+                <p class="project-text" style="font-size: auto;">
+                    SKILLS:
+                </p>
+                <p class="skill-text" style="font-size: auto;"> Electrical Circuits,
+                    Python, Programming </p>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container fade-in2" style="margin-left: 5vw; margin-right: 5vw; margin: auto; align-self: center;">
+        <div class="project-box" style="margin-top: 5vh;">
+            <h3 style="color: #dcf4fc; margin: auto;">A.I. Handwriting Transformer Model</h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> An application with a visually-appleasing user interface with an integrated
+                    model developed using OpenCV and PyTorch to detect handwritten components and convert into a .txt
+                    file.
+                </p>
+            </div>
+            <div class="fade-in2 box3" style="align-self: center; height:50%; width: auto; ">
+                <img src="aihandwritingmodel.png">
+            </div>
+            <br>
+            <div style="height: 10%;">
+                <p class="project-text"> SKILLS:
+                <p class="skill-text"> OpenCV, PyTorch, HTML/CSS/JS </p>
+                </p>
+            </div>
+        </div>
+        <div class="project-box" style="margin-top: 5vh;">
+            <h3 style="color: #dcf4fc; margin: auto;"> PenguJump </h3>
+            <div>
+                <p class="project-desc" style = "font-size: 1em;"> An interactive game developed with GreenFoot API and Java utilizing
+                    object-oriented programming and inheritance. </p>
+            </div>
+            <br>
+            <div style="height: 10%;">
+                <p class="project-text">
+                    SKILLS:
+                <p class="skill-text"> GreenFootAPI, Java, Object-Oriented
+                    Programming </p>
+                </p>
+            </div>
+
+        </div>
+        <div class="project-box" style="margin-top: 5vh;">
+            <h3 style="color: #dcf4fc; margin: auto;"> STEM/GRAD+ Initiative for Underrepresented Students in Boulder
+                Valley School District </h3>
+            <div style="height: 30%;">
+                <p class="project-desc" style = "font-size: 1em;">Led STEM Initiative for Underrepresented Youth, proposing exclusive internships
+                    via BVSD partnerships. Drafted ideas for CU Boulder grant to fund resources (calculators, tutoring,
+                    engineering kits) for under-resourced schools. </p>
+            </div>
+            <br>
+            <div>
+                <p class="project-text"">
+                SKILLS:
+            </p>
+            <p class=" skill-text"> Leadership,
+                    Presentation, Collaboration </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="next-to slideshow-container center fade-in2 honors-cont" id="Honors">
+            <div class="mySlides fade">
+                <h2 style="text-align: center;"> HONORS </h2>
+                <h3 style="margin-top: -0%; text-align: center;"> <a
+                        href="https://www.aspirations.org/2023-national-aspirations-in-computing-award-recipients-announced/"
+                        class="link-blue">
+                        NCWIT AiC 2023 National Honorable Mention </a> </h3>
+                <p style="text-align: center; padding-top: 30px;"> Awarded to 360 women/nonbinary technology enthusiasts
+                    from all over
+                    the
+                    country who have displayed
+                    exceptional achievement, aptitude, engagement, and initiative in computing. </p>
+                <p style="color: #023047; font-size: 1em;"> 1 / 5 </p>
+            </div>
+            <div class="mySlides fade">
+                <h2 style="text-align: center;"> HONORS </h2>
+                <h3 style="margin-top: -0%; text-align: center;"> <a href="
+        https://education.ti.com/en/promotion/codescontest/2021/" class="link-blue"> 2021 Texas Instruments Codes
+                        Contest </a> </h3>
+                <p style="text-align: center; padding-top: 30px;"> One of five teams who recieved an honorable mention
+                    in the finalist
+                    round,
+                    and selected from 64 teams
+                    through four rounds of development in the contest. </p>
+                <p style="color: #023047; font-size: 1em;"> 2 / 5 </p>
+            </div>
+            <div class="mySlides fade">
+                <h2 style="text-align: center;"> HONORS </h2>
+                <h3 style="margin-top: -0%; text-align: center; padding-top: 30px;"> <a
+                        href=" https://www.aspirations.org/people/shriya-b/98595/" class="link-blue"> NCWIT AiC 2023
+                        Colorado Affiliate Winner
+                    </a> </h3>
+                <p style="text-align: center;"> Awarded to high achieving women/non binary tech enthusiasts in
+                    Colorado who
+                    have demonstrated a notable
+                    aptitude, engagement, and achievement with computing. </p>
+                <p style="color: #023047; font-size: 1em;"> 3 / 5 </p>
+            </div>
+            <div class="mySlides fade">
+                <h2 style="text-align: center;"> HONORS </h2>
+                <h3 style="margin-top: -0%; color: #dcf4fc; text-align: center;"> MHacks 2023 optiMize Social Impact
+                    Award: 3rd Place </h3>
+                <p style="text-align: center;"> Awarded $200 for our civic-engagement focused website, OneVote. </p>
+                <p style="color: #023047; font-size: 1em;"> 4 / 5 </p>
+            </div>
+            <div class="mySlides fade">
+                <h2 style="text-align: center;"> HONORS </h2>
+                <h3 style="margin-top: -0%; color: #dcf4fc; text-align: center;"> Colorado Seal of Biliteracy
+                    Endorsement in Spanish </h3>
+                <p style="text-align: center;"> Awarded to students who have taken Spanish and English through Level
+                    5 and
+                    maintained an average GPA of 3.0+ in both English and Spanish courses. </p>
+                <p style="color: #023047; font-size: 1em;"> 5 / 5 </p>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div class="center-inline" style="align-self: auto;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="fade-in2 fa-3x contact">
+        <h2 class = "contact-text" id="Contact"> Let's Connect
+            <br>
+        </h2>
+        <br>
+        <a href="https://www.instagram.com/shriya_bi/"><i class="fab fa-instagram fa-bounce fa-2x"
+                style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;">
+            </i></a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/in/shriya-biddala/"> <i
+                class="fab fa-align-center fa-linkedin fa-bounce fa-2x"> </i> </a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="https://github.com/shriyabi"> <i class="fa-brands fa-github fa-bounce fa-2x"></i> </a>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <i class="fa-brands fa-google fa-bounce fa-2x"
+            style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; text-align: center;">
+            <span class="google-hover-text"
+                style="color: #023047; font-size: 0.2em; font-family: 'Dosis', sans-serif;
+            font-family: 'Poppins', sans-serif; font-family: 'Raleway', sans-serif;  font-family: 'Roboto Condensed', sans-serif; border-radius: 6px; box-shadow: 0 0 4em #023047;">
+                School email: sbiddala@umich.edu <br> Personal email: shriyarbiddala@gmail.com</span>
+        </i>
+        <br>
+        <p class = "copy-right-text">
+            &copy;Shriya Biddala</p>
+    </div>
+
+    <script src="Home.js"> </script>
 </body>
 </html>
