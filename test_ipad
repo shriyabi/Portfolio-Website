@@ -15,8 +15,8 @@
 <body>
 
     <style>
-   
-   @media only screen and (min-width: 451px) and (max-width: 1999px) {
+        /* Styles for default screen sizes */
+        @media only screen and (min-width: 451px) and (max-width: 1999px) {
             /*.container {
                 display: inline;
             }
@@ -66,7 +66,7 @@
                 font-family: 'Poppins', sans-serif;
                 font-family: 'Raleway', sans-serif;
                 font-size: 5em;
-                padding-top: 3vh;
+                padding-top: 1vh;
             }
 
             /* Animation */
@@ -113,7 +113,7 @@
                 font-family: 'Roboto Condensed', sans-serif;
                 color: #FFB703;
                 padding: 5px;
-                font-size: 2em;
+                font-size: 0.25em;
                 margin-top: 20vh;
                 text-align: center;
             }
@@ -125,7 +125,7 @@
                 font-family: 'Dosis', sans-serif;
                 font-family: 'Poppins', sans-serif;
                 font-family: 'Raleway', sans-serif;
-                font-size: 1.5em;
+                font-size: 1em;
                 opacity: 0;
                 animation: fadeIn 4s 3s forwards;
                 text-align: center;
@@ -239,7 +239,7 @@
                 font-family: 'Raleway', sans-serif;
                 font-family: 'Roboto Condensed', sans-serif;
                 color: #FFB703;
-                font-size: 1.5em;
+                font-size: 0.5em;
             }
 
             .center {
@@ -323,7 +323,7 @@
                 font-family: 'Raleway', sans-serif;
                 font-family: 'Roboto Condensed', sans-serif;
                 color: #FB8500;
-                font-size: 1.5em;
+                font-size: 2em;
                 text-align: center;
                 opacity: 0;
                 margin-bottom: 20vh;
@@ -781,7 +781,7 @@
             }
 
             .project_desc {
-                font-size: 1em;
+                font-size: 0.6em;
             }
 
             .about-me {
@@ -839,7 +839,7 @@
 
             .copy-right-text {
                 color: #023047;
-                font-size: 0.5em;
+                font-size: 0.75em;
                 text-align: left;
                 padding-left: 0.625em;
                 padding-bottom: 0.625em;
